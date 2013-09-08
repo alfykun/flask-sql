@@ -1,1 +1,5 @@
-#we're going to rule the world, yo!
+#Installation
+
+    virtualenv env
+    env\scripts\activate
+    pip install -r requirments.txt
