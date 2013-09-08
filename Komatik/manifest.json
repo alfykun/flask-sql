@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Komatik",
+  "description": "This Extension allows a user to convert inputs to CSV and vice versa",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
