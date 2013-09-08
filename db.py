@@ -31,12 +31,17 @@ def insert(query):
 def hello():
 	return "Hello world"
 
-@app.route("/query")
+@app.route("/query/")
 def makeSomeQuery():
     print query('select * from counts')
     counts = query('select * from counts')
     return json.dumps(counts)
 	
+@app.route("/insert/<key>/<value>/")
+def insertSomething(key,value):
+    insert("insert into counts (key,value) values ('"+key+"',"+value+")")
+    return "run /query again"
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
